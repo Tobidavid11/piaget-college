@@ -100,9 +100,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
-  background: #a01e1e;
-  color: white;
+  padding: 5px;
+  background: none;
+  color: #a01e1e;
   border: none;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -114,7 +114,6 @@
 }
 
 .service-button:hover {
-  background: #8a1818;
   transform: translateX(4px);
 }
 
