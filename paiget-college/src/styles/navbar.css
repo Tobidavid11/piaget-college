@@ -45,7 +45,7 @@
 }
 
 .navbar-logo img {
-width: 120px;
+  width: 120px;
 }
 
 .nav-menu.desktop {
@@ -95,6 +95,16 @@ width: 120px;
   color: var(--primary-color);
 }
 
+/* Active state styles for desktop nav */
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
 .submenu {
   position: absolute;
   top: 100%;
@@ -139,6 +149,18 @@ width: 120px;
   background-color: var(--cream-bg);
   border-left-color: var(--primary-color);
   padding-left: 1.75rem;
+}
+
+/* Active state for submenu items */
+.submenu-item.active {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-left-color: var(--primary-light);
+  font-weight: 600;
+}
+
+.submenu-item.active:hover {
+  background-color: var(--primary-light);
 }
 
 .mobile-menu-btn {
@@ -191,6 +213,14 @@ width: 120px;
   background-color: var(--cream-bg);
 }
 
+/* Active state for mobile nav */
+.mobile-nav-link.active {
+  background-color: var(--cream-bg);
+  color: var(--primary-color);
+  font-weight: 600;
+  border-left: 4px solid var(--primary-color);
+}
+
 .chevron {
   transition: transform 0.3s ease;
 }
@@ -216,6 +246,13 @@ width: 120px;
 .mobile-submenu-item:hover {
   background-color: var(--primary-color);
   color: var(--light-text);
+}
+
+.mobile-submenu-item.active {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  font-weight: 600;
+  border-left: 4px solid var(--primary-light);
 }
 
 /* Responsive Design */

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import SecondaryLogo from "../assets/logo2.png"
 import "../styles/navbar.css"
@@ -36,6 +36,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,25 +47,42 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const isActive = (item: NavItem) => {
+    if (location.pathname === item.href) return true
+    
+    if (item.submenu) {
+      return item.submenu.some(sub => location.pathname === sub.href)
+    }
+    
+    return false
+  }
+
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-      <img src={SecondaryLogo} alt="" />
+          <img src={SecondaryLogo} alt="" />
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="nav-menu desktop">
           {navItems.map((item) => (
             <li key={item.label} className="nav-item">
-              <Link to={item.href} className="nav-link">
+              <Link 
+                to={item.href} 
+                className={`nav-link ${isActive(item) ? "active" : ""}`}
+              >
                 {item.label}
               </Link>
               {item.submenu && (
                 <div className="submenu">
                   {item.submenu.map((sub) => (
-                    <Link key={sub.label} to={sub.href} className="submenu-item">
+                    <Link 
+                      key={sub.label} 
+                      to={sub.href} 
+                      className={`submenu-item ${location.pathname === sub.href ? "active" : ""}`}
+                    >
                       {sub.label}
                     </Link>
                   ))}
@@ -94,7 +112,7 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <li key={item.label} className="mobile-nav-item">
                   <button
-                    className="mobile-nav-link"
+                    className={`mobile-nav-link ${isActive(item) ? "active" : ""}`}
                     onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                   >
                     {item.label}
@@ -113,7 +131,7 @@ export default function Navbar() {
                         <Link
                           key={sub.label}
                           to={sub.href}
-                          className="mobile-submenu-item"
+                          className={`mobile-submenu-item ${location.pathname === sub.href ? "active" : ""}`}
                           onClick={() => setIsOpen(false)}
                         >
                           {sub.label}

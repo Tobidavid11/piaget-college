@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import "./App.css"
 import Homepage from "./pages/homepage"
 import Loader from "./loader/loader"
-
+import AboutPage from "./pages/aboutpage"
 function AppContent() {
   const [loading, setLoading] = useState(false)
   const location = useLocation()
@@ -21,7 +21,7 @@ function AppContent() {
       <Loader isActive={loading} />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        {/* Add more routes here as needed */}
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </>
   )
