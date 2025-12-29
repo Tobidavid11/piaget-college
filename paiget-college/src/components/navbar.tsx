@@ -17,12 +17,12 @@ const navItems: NavItem[] = [
   { label: "ABOUT US", href: "/about" },
   {
     label: "ACADEMICS",
-    href: "/academics",
+    href: "/",
     submenu: [
-      { label: "Primary Education", href: "/academics/primary" },
-      { label: "Secondary Education", href: "/academics/secondary" },
-      { label: "Early Childhood", href: "/academics/early-childhood" },
-      { label: "Languages (Yoruba & French)", href: "/academics/languages" },
+      { label: "Schools", href: "/academics/schools" },
+      { label: "Available Courses", href: "/academics/available-courses" },
+      { label: "Sandwich Programme", href: "/academics/sandwich-programme" },
+      { label: "Academic Calendar", href: "/academics/calendar" },
     ],
   },
   { label: "ADMISSIONS", href: "/admissions" },
@@ -65,7 +65,7 @@ export default function Navbar() {
           <img src={SecondaryLogo} alt="" />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <ul className="nav-menu desktop">
           {navItems.map((item) => (
             <li key={item.label} className="nav-item">

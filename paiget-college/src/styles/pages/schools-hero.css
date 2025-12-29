@@ -1,0 +1,125 @@
+/* Hero Section */
+.hero-section-modern {
+  position: relative;
+  padding: 140px 20px 100px;
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  overflow: hidden;
+}
+
+.hero-decoration {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  opacity: 0.03;
+}
+
+.hero-decoration-1 {
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, #a01e1e 0%, transparent 70%);
+}
+
+.hero-decoration-2 {
+  bottom: -300px;
+  left: -300px;
+  background: radial-gradient(circle, #a01e1e 0%, transparent 70%);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #a01e1e 0%, #d63d3d 100%);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(160, 30, 30, 0.25);
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #888;
+  padding: 12px 24px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.hero-breadcrumb a {
+  color: #a01e1e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.hero-breadcrumb a:hover {
+  color: #d63d3d;
+}
+
+.breadcrumb-separator {
+  color: #ddd;
+}
+
+.breadcrumb-current {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section-modern {
+    padding: 120px 20px 80px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
