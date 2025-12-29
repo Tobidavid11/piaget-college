@@ -46,8 +46,7 @@ function Testimonials() {
           className="section-header"
         >
           <span className="subtitle">Alumni Stories</span>
-          <h2 className="title">What Our Alumnis Are Saying</h2>
-          <div className="title-underline"></div>
+          <h2 className="title">What Our Alumni Are Saying</h2>
         </motion.div>
 
         <div className="testimonials-grid">
@@ -59,18 +58,22 @@ function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
             >
               <div className="quote-icon">
-                <Quote size={24} />
+                <Quote size={28} strokeWidth={2.5} />
               </div>
-              <p className="testimonial-text">"{testimonial.quote}"</p>
+              
+              <div className="testimonial-content">
+                <p className="testimonial-text">"{testimonial.quote}"</p>
+              </div>
+
               <div className="testimonial-footer">
-                <img
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="testimonial-image"
-                />
+                <div className="testimonial-avatar">
+                  <img
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.name}
+                  />
+                </div>
                 <div className="testimonial-info">
                   <h4 className="testimonial-name">{testimonial.name}</h4>
                   <p className="testimonial-role">{testimonial.role}</p>
