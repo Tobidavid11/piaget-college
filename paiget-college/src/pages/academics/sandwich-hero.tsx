@@ -11,7 +11,7 @@ const SandwichHero = () => {
           <div className="hero-info-grid">
             <div className="info-item">
               <span className="info-label">When</span>
-              <span className="info-value">Aug. 3 – Oct. 16, 2024</span>
+              <span className="info-value">Aug. 3 – Oct. 16, 2025</span>
             </div>
             <div className="info-item">
               <span className="info-label">Where</span>

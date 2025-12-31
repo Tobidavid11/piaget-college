@@ -96,7 +96,7 @@ export default function Footer() {
             <h3 className="footer-title">Admission Office</h3>
             <div className="admission-info">
               <h4>PIAGET College of Education</h4>
-              <div className="info-item">
+              <div className="footer-info-item">
                 <MapPin size={18} />
                 <div>
                   <p>34, Quarry Road,</p>
@@ -104,7 +104,7 @@ export default function Footer() {
                   <p>Ogun State, Nigeria.</p>
                 </div>
               </div>
-              <div className="info-item">
+              <div className="footer-info-item">
                 <Phone size={18} />
                 <div>
                   <p>Phone Numbers:</p>
@@ -112,7 +112,7 @@ export default function Footer() {
                   <a href="tel:+2349036002738">09036002738</a>
                 </div>
               </div>
-              <div className="info-item">
+              <div className="footer-info-item">
                 <Mail size={18} />
                 <a href="mailto:info@piagetcoe.edu.ng">info@piagetcoe.edu.ng</a>
               </div>

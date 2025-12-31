@@ -125,34 +125,34 @@
   color: #fff;
 }
 
-.info-item {
+.footer-info-item {
   display: flex;
   gap: 12px;
   margin-bottom: 18px;
   align-items: flex-start;
 }
 
-.info-item svg {
+.footer-info-item svg {
   flex-shrink: 0;
   color: #f4d4c8;
   margin-top: 2px;
 }
 
-.info-item p {
+.footer-info-item p {
   margin: 0;
   font-size: 13px;
   line-height: 1.6;
   color: #e8ddd7;
 }
 
-.info-item a {
+.footer-info-item a {
   color: #f4d4c8;
   text-decoration: none;
   font-size: 13px;
   transition: color 0.3s ease;
 }
 
-.info-item a:hover {
+.footer-info-item a:hover {
   color: #fff;
   text-decoration: underline;
 }

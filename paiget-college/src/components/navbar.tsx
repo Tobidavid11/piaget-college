@@ -25,9 +25,9 @@ const navItems: NavItem[] = [
       { label: "Academic Calendar", href: "/academics/calendar" },
     ],
   },
-  { label: "ADMISSIONS", href: "/admissions" },
   { label: "E-LIBRARY", href: "/library" },
   { label: "WORKSHOPS", href: "/workshops" },
+  { label: "GALLERY", href: "/gallery" },
   { label: "CONTACT US", href: "/contact" },
   { label: "PDE", href: "/pde" },
 ]

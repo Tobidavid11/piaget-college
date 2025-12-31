@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import "./App.css"
@@ -11,7 +10,8 @@ import Availablecoursespage from "./pages/academics/subpages/availablecoursespag
 import Sandwichprogramme from "./pages/academics/subpages/sandwichprogramme"
 import Calendarpage from "./pages/academics/subpages/calendarpage"
 import Workshopspage from "./pages/workshops/workshopspage"
-
+import Contactus from "./pages/contact/contactus"
+import GalleryPage from "./pages/gallery/gallery"
 function ScrollToTop() {
   const { pathname } = useLocation()
 
@@ -44,6 +44,8 @@ function AppContent() {
         <Route path="/academics/sandwich-programme" element={<Sandwichprogramme />} />
         <Route path="/academics/calendar" element={<Calendarpage />} />
         <Route path="/workshops" element={<Workshopspage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<Contactus/>} />
       </Routes>
     </>
   )

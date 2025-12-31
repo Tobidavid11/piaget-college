@@ -1,0 +1,16 @@
+.gallery-page {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 90px 20px 60px;
+  }
+}
